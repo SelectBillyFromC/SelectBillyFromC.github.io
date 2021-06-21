@@ -1,0 +1,73 @@
+title {
+    color: black;
+    font-family: Helvetica;
+    font-size: 35px;      
+}
+
+body {
+    background-color: lightblue;
+}
+  
+h1 {
+    background-color: palevioletred;
+    border-style: groove;
+    color: black;
+    font-style: oblique;
+    font-size: 35px;
+    text-align: left;
+}
+
+h2 {
+    background-color: blueviolet;
+    border-style: double;
+    font-size: 20px;
+}
+
+.scroll-left {
+    height: auto;
+    overflow: visible;
+    position: static;
+}
+
+.scroll-left p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    line-height: 50px;
+    text-align: center;
+/*Starting position*/
+    -moz-transform:translateX(100%);
+    -webkit-transform:translateX(100%); 
+    transform:translateX(100%);
+/* Apply animation to this element */ 
+    -moz-animation: scroll-left 10s linear infinite;
+    -webkit-animation: scroll-left 10s linear infinite;
+    animation: scroll-left 10s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes scroll-left {
+    0% { -moz-transform: translateX(100%); }
+    100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scroll-left {
+    0% { -webkit-transform: translateX(100%); }
+    100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroll-left {
+    0% { 
+        -moz-transform: translateX(100%); /* Browser bug fix */
+        -webkit-transform: translateX(100%); /* Browser bug fix */
+        transform: translateX(100%); 
+    }
+    100% { 
+        -moz-transform: translateX(-100%); /* Browser bug fix */
+        -webkit-transform: translateX(-100%); /* Browser bug fix */
+        transform: translateX(-100%); 
+    }
+}
+
+p {
+    font-family: verdana;
+    font-size: 18px;
+}
